@@ -22,7 +22,7 @@ if __name__ == '__main__':
 
     # perform the runtime tests
     print("| x | timsort | merge_sorted | quick_sorted |")
-    print("|...|.........|..............|..............|")
+    print("|---|---------|--------------|--------------|")
     for x in range(0, args.max_x+1):
 
         if args.input == 'random':
