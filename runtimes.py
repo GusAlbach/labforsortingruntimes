@@ -21,6 +21,8 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     # perform the runtime tests
+    print("| x | timsort | merge_sorted | quick_sorted |")
+    print("|...|.........|..............|..............|")
     for x in range(0, args.max_x+1):
 
         if args.input == 'random':
@@ -55,8 +57,8 @@ if __name__ == '__main__':
         # You will have to look up how to do this formatting.
         # In order to get a proper markdown table,
         # you will have to also print a header line somewhere else.
-        print(f'len(xs)=2**{x} runtimes={runtimes}')
+        print(f"| {x} | {runtimes['timsort']:0.2e} | {runtimes['merge_sorted']:0.2e} | {runtimes['quick_sorted']:0.2e} | ")
 
         # HINT:
         # use f-strings and a print statement that looks something like
-        # print(f"| {runtimes['timsort']:0.2e} ")
+        # print(f"| {runtimes['timsort']:0.2e} | {runtimes['merge_sorted']:0.2e} | {runtimes['quick_sorted']:0.2e} ")
